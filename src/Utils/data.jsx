@@ -48,7 +48,7 @@ export const kittleproducts = [
   {
     id: 1,
     name: "Premium Kettle",
-    company: "Smart Dry Fruits",
+    company: "SLR Metals",
     image: "Images/ProductCategories/kittle.webp",
     rating: 4.8,
     price: 299,
@@ -58,7 +58,7 @@ export const kittleproducts = [
   {
     id: 2,
     name: "Steel Water Jug",
-    company: "Smart Dry Fruits",
+    company: "SLR Metals",
     image: "Images/ProductCategories/kittle.webp",
     rating: 4.6,
     price: 499,
@@ -68,7 +68,7 @@ export const kittleproducts = [
   {
     id: 3,
     name: "Premium Flask",
-    company: "Smart Dry Fruits",
+    company: "SLR Metals",
     image: "Images/ProductCategories/kittle.webp",
     rating: 4.7,
     price: 399,
@@ -81,7 +81,7 @@ export const kinamproducts = [
    {
     id: 4,
     name: "Premium Flask",
-    company: "Smart Dry Fruits",
+    company: "SLR Metals",
     image: "Images/ProductCategories/kinam.webp",
     rating: 4.7,
     price: 399,
@@ -94,7 +94,7 @@ export const kuttamproducts = [
     {
     id: 5,
     name: "Premium Flask",
-    company: "Smart Dry Fruits",
+    company: "SLR Metals",
     image: "Images/ProductCategories/kuttam.jpg",
     rating: 4.7,
     price: 399,
@@ -107,7 +107,7 @@ export const valliproducts = [
     {
     id: 6,
     name: "Premium Flask",
-    company: "Smart Dry Fruits",
+    company: "SLR Metals",
     image: "Images/ProductCategories/valli.jpg",
     rating: 4.7,
     price: 399,
