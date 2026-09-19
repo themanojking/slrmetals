@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Star, Plus, Minus, ShoppingCart } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Redux/cartSlice";
 
 const ProductCard = ({
+  id,
   image,
   name,
   company,
@@ -14,6 +17,7 @@ const ProductCard = ({
   delay = 0,
 }) => {
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   // ================= AOS INITIALIZATION =================
   useEffect(() => {
@@ -38,6 +42,22 @@ const ProductCard = ({
   // ================= DYNAMIC PRICE =================
   const totalPrice = price * quantity;
   const totalOriginalPrice = originalPrice * quantity;
+
+  const handleAddToCart = () => {
+    dispatch(
+      addToCart({
+        id,
+        image,
+        name,
+        company,
+        rating,
+        price,
+        originalPrice,
+        tag,
+        quantity,
+      }),
+    );
+  };
 
   return (
     <div
@@ -120,29 +140,18 @@ const ProductCard = ({
       {/* ================= PRODUCT CONTENT ================= */}
       <div className="p-4 sm:p-5">
         {/* Product Name */}
-        <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
-          {name}
-        </h3>
+        <h3 className="text-lg font-bold text-gray-900 sm:text-xl">{name}</h3>
 
         {/* Company Name */}
-        <p className="mt-1 text-sm text-gray-500">
-          {company}
-        </p>
+        <p className="mt-1 text-sm text-gray-500">{company}</p>
 
         {/* ================= RATING ================= */}
         <div className="mt-3 flex items-center gap-1.5">
-          <Star
-            size={17}
-            className="fill-yellow-400 text-yellow-400"
-          />
+          <Star size={17} className="fill-yellow-400 text-yellow-400" />
 
-          <span className="text-sm font-semibold text-gray-700">
-            {rating}
-          </span>
+          <span className="text-sm font-semibold text-gray-700">{rating}</span>
 
-          <span className="text-xs text-gray-400">
-            / 5
-          </span>
+          <span className="text-xs text-gray-400">/ 5</span>
         </div>
 
         {/* ================= PRICE ================= */}
@@ -163,9 +172,7 @@ const ProductCard = ({
 
         {/* ================= QUANTITY ================= */}
         <div className="mt-5 flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-700">
-            Quantity
-          </span>
+          <span className="text-sm font-medium text-gray-700">Quantity</span>
 
           <div
             className="
@@ -246,30 +253,10 @@ const ProductCard = ({
         {/* ================= ADD TO CART ================= */}
         <button
           type="button"
-          className="
-            mt-5
-            flex
-            w-full
-            items-center
-            justify-center
-            gap-2
-            rounded-xl
-            bg-orange-500
-            px-4
-            py-3
-            text-sm
-            font-semibold
-            text-white
-            shadow-sm
-            transition-all
-            duration-300
-            hover:bg-orange-600
-            hover:shadow-lg
-            active:scale-[0.98]
-          "
+          onClick={handleAddToCart}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-orange-600 hover:shadow-lg active:scale-[0.98]"
         >
           <ShoppingCart size={18} />
-
           Add to Cart
         </button>
       </div>

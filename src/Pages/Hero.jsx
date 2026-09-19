@@ -4,6 +4,9 @@ import ImageSliderHome from "../Components/ImageSliderHome";
 import { productCategories } from "../Utils/data";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
+import { Truck, CreditCard, BadgeCheck, Gift } from "lucide-react";
+import Features from "../Components/Features";
+import CustomerFeedback from "../Components/CustomerFeedack";
 
 const Hero = () => {
   return (
@@ -26,12 +29,10 @@ const Hero = () => {
         </div>
 
         {/* Product Categories */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
           {productCategories.map((category) => (
             <Link key={category.id} to={category.link}>
-              <div
-                className="relative h-[275px] overflow-hidden rounded-[25px] group cursor-pointer"
-              >
+              <div className="group relative h-[240px] cursor-pointer overflow-hidden rounded-[25px]">
                 {/* Image */}
                 <img
                   src={category.image}
@@ -49,6 +50,12 @@ const Hero = () => {
               </div>
             </Link>
           ))}
+        </div>
+        <div className="mt-10">
+          <Features />
+        </div>
+        <div className="mt-10">
+          <CustomerFeedback />
         </div>
       </section>
       <Footer />

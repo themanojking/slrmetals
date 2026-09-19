@@ -114,4 +114,55 @@ export const valliproducts = [
     originalPrice: 499,
     tag: "15% OFF",
   },
+];
+
+export const customerfeedback = [
+  {
+    id: 1,
+    name: "Arun Kumar",
+    location: "Kumbakonam",
+    image: "https://i.pravatar.cc/150?img=12",
+    feedback:
+      "Very good quality products. The finishing is excellent and the delivery was also smooth. Highly recommended.",
+  },
+  {
+    id: 2,
+    name: "Suresh B",
+    location: "Thanjavur",
+    image: "https://i.pravatar.cc/150?img=11",
+    feedback:
+      "Good product quality and reasonable pricing. Customer service was also very helpful. Happy with my purchase.",
+  },
+  {
+    id: 3,
+    name: "Priya S",
+    location: "Mayiladuthurai",
+    image: "https://i.pravatar.cc/150?img=47",
+    feedback:
+      "I really liked the quality of the product. The product looks premium and works perfectly. Good experience overall.",
+  },
+  {
+    id: 4,
+    name: "Vignesh R",
+    location: "Kumbakonam",
+    image: "https://i.pravatar.cc/150?img=13",
+    feedback:
+      "Excellent service and quality. The product was packed properly and reached me safely. Will definitely purchase again.",
+  },
+  {
+    id: 5,
+    name: "Karthik M",
+    location: "Trichy",
+    image: "https://i.pravatar.cc/150?img=14",
+    feedback:
+      "Really satisfied with the product. Quality is good and the overall shopping experience was simple and easy.",
+  },
+  {
+    id: 6,
+    name: "Deepa R",
+    location: "Chennai",
+    image: "https://i.pravatar.cc/150?img=44",
+    feedback:
+      "Good quality and excellent service. I received exactly what I expected. Highly recommended for everyday products.",
+  },
 ]
